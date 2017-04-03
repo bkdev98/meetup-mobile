@@ -5,6 +5,9 @@
   "author": "Quoc Khanh",
   "private": true,
   "main": "main.js",
+  "scripts": {
+    "postinstall": "rndebugger-open"
+  },
   "dependencies": {
     "axios": "^0.15.3",
     "eslint": "^3.18.0",
@@ -12,9 +15,14 @@
     "react": "~15.4.0",
     "react-native": "https://github.com/exponent/react-native/archive/sdk-15.0.0.tar.gz",
     "react-native-extended-stylesheet": "^0.3.2",
-    "react-navigation": "^1.0.0-beta.7"
+    "react-navigation": "^1.0.0-beta.7",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-promise-middleware": "^4.2.0"
   },
   "devDependencies": {
-    "eslint-config-bkdev": "^1.0.1"
+    "eslint-config-bkdev": "^1.0.1",
+    "react-native-debugger-open": "^0.3.3",
+    "redux-logger": "^3.0.1"
   }
 }

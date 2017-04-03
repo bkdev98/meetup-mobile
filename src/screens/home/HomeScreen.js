@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import { MeetupApi } from '../../../constants/api';
+import { connect } from 'react-redux';
 import { LoadingScreen } from '../../commons';
 import { MyMeetupsList } from './components';
+
+import { fetchMeetups } from './actions';
 import Colors from '../../../constants/Colors';
 import styles from './styles/HomeScreen';
 
-const meetupApi = new MeetupApi();
-
+@connect(
+  state => ({
+    meetups: state.home.meetups
+  }),
+  { fetchMeetups })
 class HomeScreen extends Component {
-  static defaultProps = {
-    meetupApi
-  }
-
   static navigationOptions = {
     header: {
       style: {
@@ -22,7 +23,7 @@ class HomeScreen extends Component {
     },
     tabBar: {
       icon: ({ tintColor }) => (
-        <FontAwesome 
+        <FontAwesome
           name="home"
           size={25}
           color={tintColor}
@@ -31,27 +32,27 @@ class HomeScreen extends Component {
     }
   }
 
-  state = {
-    loading: false,
-    meetups: []
-  }
-
-  async componentDidMount() {
-    this.setState({ loading: true });
-    try {
-      const meetups = await this.props.meetupApi.fetchGroupMeetups();
-      this.setState({
-        loading: false,
-        meetups
-      });
-    } catch (err) {
-      console.log(err);
-    }
+  componentDidMount() {
+    this.props.fetchMeetups();
   }
 
   render() {
-    if (this.state.loading) {
+    const {
+      meetups: {
+        isFetched,
+        data,
+        error
+      }
+    } = this.props;
+
+    if (!isFetched) {
       return <LoadingScreen />;
+    } else if (error.on) {
+      return (
+        <View>
+          <Text>{error.message}</Text>
+        </View>
+      );
     }
 
     return (
@@ -60,7 +61,7 @@ class HomeScreen extends Component {
           <Text>HomeScreen</Text>
         </View>
         <View style={styles.bottomContainer}>
-          <MyMeetupsList meetups={this.state.meetups} />
+          <MyMeetupsList meetups={data} />
         </View>
       </View>
     );
