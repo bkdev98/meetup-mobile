@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { connect } from 'react-redux';
+import { Button, Icon } from 'native-base';
 import { LoadingScreen } from '../../commons';
 import { MyMeetupsList } from './components';
 
@@ -16,10 +17,26 @@ import styles from './styles/HomeScreen';
   { fetchMeetups })
 class HomeScreen extends Component {
   static navigationOptions = {
-    header: {
-      style: {
-        backgroundColor: Colors.redColor
-      }
+    header: ({ navigate }) => {
+      const style = { backgroundColor: Colors.redColor };
+      const right = (
+        <View>
+          <Button
+            transparent
+            onPress={() => navigate('CreateMeetup')}
+          >
+            <Icon
+              name="md-add-circle"
+              style={{
+                fontSize: 30,
+                color: Colors.whiteColor
+              }}
+            />
+          </Button>
+        </View>
+      );
+
+      return { style, right };
     },
     tabBar: {
       icon: ({ tintColor }) => (
