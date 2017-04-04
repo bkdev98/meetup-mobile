@@ -15,9 +15,9 @@
     hoist-non-react-statics "^1.2.0"
     lodash "^4.15.0"
 
-"@shoutem/theme@git+https://github.com/GeekyAnts/theme.git#caching":
+"@shoutem/theme@https://github.com/GeekyAnts/theme#caching":
   version "0.8.8"
-  resolved "git+https://github.com/GeekyAnts/theme.git#7c8d0ab19eb452c8c465bbd8e27f8cdc32fddba5"
+  resolved "https://github.com/GeekyAnts/theme#7c8d0ab19eb452c8c465bbd8e27f8cdc32fddba5"
   dependencies:
     hoist-non-react-statics "^1.0.5"
     lodash "^4.10.1"
@@ -2247,6 +2247,10 @@ image-size@^0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.3.5.tgz#83240eab2fb5b00b04aab8c74b0471e9cba7ad8c"
 
+immutable@^3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
+
 immutable@~3.7.6:
   version "3.7.6"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.7.6.tgz#13b4d3cb12befa15482a26fe1b2ebae640071e4b"
@@ -2786,7 +2790,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x.x:
+moment@2.x.x, moment@^2.15.0, moment@^2.18.1:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
@@ -3171,6 +3175,10 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-animatable@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.1.1.tgz#00ddc72985f62f62a11a505abb1a06e77a92cd8a"
+
 react-native-debugger-open@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/react-native-debugger-open/-/react-native-debugger-open-0.3.3.tgz#8fd92357c7cce82bf88eb39433a7a69f809dc7d5"
@@ -3207,6 +3215,13 @@ react-native-easy-grid@0.1.7:
   dependencies:
     lodash "^4.11.1"
 
+react-native-elements@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.10.3.tgz#ddef62a456cb71a21a2fdf4aa9ee268af7e1cdd0"
+  dependencies:
+    react-native-side-menu "^0.20.1"
+    react-native-tab-navigator "^0.3.3"
+
 react-native-extended-stylesheet@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/react-native-extended-stylesheet/-/react-native-extended-stylesheet-0.3.2.tgz#1cfcb2652bbe384d1932131ae8598e5da99a56cc"
@@ -3230,6 +3245,19 @@ react-native-keyboard-aware-scroll-view@0.2.7:
   version "0.12.2"
   resolved "https://github.com/exponent/react-native-maps/archive/v0.12.2-exp.1.tar.gz#1984bfe5a8a341dd3b44ad565cfcd1b25a5c2b03"
 
+react-native-modal-datetime-picker@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-modal-datetime-picker/-/react-native-modal-datetime-picker-4.2.1.tgz#fa8a6f61d1d888f2b9b98bf3d17d31dd91ae2ebe"
+  dependencies:
+    moment "^2.15.0"
+    react-native-modal "^2.0.2"
+
+react-native-modal@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-2.0.2.tgz#ea3e1daffd0ac1d6ac4552e4ead654d1733a2bf9"
+  dependencies:
+    react-native-animatable "^1.1.1"
+
 react-native-safe-module@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-safe-module/-/react-native-safe-module-1.1.1.tgz#c3eb1d2030661676b075ba8d12c305a31b1d8fb4"
@@ -3242,12 +3270,22 @@ react-native-scrollable-tab-view@^0.7.1:
   dependencies:
     react-timer-mixin "^0.13.3"
 
+react-native-side-menu@^0.20.1:
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/react-native-side-menu/-/react-native-side-menu-0.20.1.tgz#df21b4bb9d8a1aa3bae53d74ddf8a739eb59bfc5"
+
 "react-native-svg@https://github.com/exponent/react-native-svg/archive/4.4.1.tar.gz":
   version "4.4.1"
   resolved "https://github.com/exponent/react-native-svg/archive/4.4.1.tar.gz#fb1719b0d15fabc1b5c3aca8a94b1629409c1d67"
   dependencies:
     color "^0.11.1"
     lodash "^4.0.0"
+
+react-native-tab-navigator@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/react-native-tab-navigator/-/react-native-tab-navigator-0.3.3.tgz#b222bad21fbe773c8d28f9a0de30ce62b08724d3"
+  dependencies:
+    immutable "^3.8.1"
 
 react-native-tab-view@^0.0.57:
   version "0.0.57"

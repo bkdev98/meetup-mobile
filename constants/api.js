@@ -19,12 +19,21 @@ class MeetupApi {
     this.path = `/groups/${this.groupId}/meetups`;
   }
 
-  fetchGroupMeetups = async () => {
+  async fetchGroupMeetups() {
     try {
       const { data } = await axios.get(this.path);
       return data.meetups;
     } catch (err) {
       console.log(err);
+    }
+  }
+
+  async createGroupMeetups(args) {
+    try {
+      const res = await axios.post(`${this.path}/new`, { ...args });
+      return res;
+    } catch (e) {
+      console.log(e);
     }
   }
 }
