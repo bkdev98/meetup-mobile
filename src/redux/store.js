@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
-import logger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
 import reducers from './reducers';
@@ -11,7 +11,7 @@ const middlewares = [
 ];
 
 if (__DEV__) {//  eslint-disable-line
-  middlewares.push(logger);
+  middlewares.push(createLogger());
 }
 
 const enhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

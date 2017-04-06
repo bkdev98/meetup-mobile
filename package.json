@@ -6,7 +6,9 @@
   "private": true,
   "main": "main.js",
   "scripts": {
-    "postinstall": "rndebugger-open"
+    "postinstall": "rndebugger-open",
+    "lint": "eslint src main.js",
+    "lint:fix": "eslint --fix src main.js"
   },
   "dependencies": {
     "axios": "^0.16.0",
@@ -23,7 +25,8 @@
     "redux": "^3.6.0",
     "redux-form": "^6.6.1",
     "redux-promise-middleware": "^4.2.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "eslint-config-bkdev": "^1.0.1",
