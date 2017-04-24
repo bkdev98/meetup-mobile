@@ -5,21 +5,10 @@ import styled from 'styled-components/native';
 import Fonts from '../../../constants/Fonts';
 import Colors from '../../../constants/Colors';
 
-const FlexContainer = styled.View`
-  flex: 1;
-  justifyContent: center;
-  alignItems: center;
-`;
-
 const MeetupText = styled.Text`
   color: ${Colors.redColor};
   fontSize: 18;
   fontFamily: montserratBold;
-`;
-
-const ButtomButtonWrapper = styled.View`
-  flex: 0.2;
-  flexDirection: row;
 `;
 
 const Button = styled.TouchableOpacity`
@@ -27,6 +16,17 @@ const Button = styled.TouchableOpacity`
   alignItems: center;
   flex: 1;
   backgroundColor: ${({ color }) => color}
+`;
+
+const FlexContainer = styled.View`
+  flex: 1;
+  justifyContent: center;
+  alignItems: center;
+`;
+
+const ButtomButtonWrapper = styled.View`
+  flex: 0.2;
+  flexDirection: row;
 `;
 
 export default class LoginScreen extends Component {
