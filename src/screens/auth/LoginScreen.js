@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import styled from 'styled-components/native';
 
 import Fonts from '../../../constants/Fonts';
@@ -22,6 +22,7 @@ const FlexContainer = styled.View`
   flex: 1;
   justifyContent: center;
   alignItems: center;
+  alignSelf: stretch;
 `;
 
 const ButtomButtonWrapper = styled.View`
