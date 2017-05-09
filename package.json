@@ -6,7 +6,6 @@
   "private": true,
   "main": "main.js",
   "scripts": {
-    "postinstall": "rndebugger-open",
     "lint": "eslint src main.js",
     "lint:fix": "eslint --fix src main.js"
   },
@@ -30,7 +29,6 @@
   },
   "devDependencies": {
     "eslint-config-bkdev": "^1.0.1",
-    "react-native-debugger-open": "^0.3.4",
     "redux-logger": "^3.0.1"
   }
 }
