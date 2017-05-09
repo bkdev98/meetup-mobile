@@ -31,7 +31,7 @@ const FlexContainer = styled.View`
 `;
 
 const ButtomButtonWrapper = styled.View`
-  flex: 0.2;
+  flex: 0.25;
   flexDirection: row;
 `;
 
